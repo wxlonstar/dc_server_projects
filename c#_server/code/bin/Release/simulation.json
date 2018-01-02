@@ -1,0 +1,7 @@
+{
+	"console":1,
+    "net_server_ip":"127.0.0.1",
+	"net_server_port":7001,
+	"user_name":"test1",
+	"user_psw":"1"
+}

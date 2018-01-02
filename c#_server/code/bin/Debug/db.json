@@ -1,0 +1,49 @@
+{
+	"db_list":
+	[
+		{
+			"id":0,
+			"type":1,
+			"name":"dc_memberdb",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root",
+			"account_begin":"0",
+			"account_end":"0"
+		},
+		{
+			"id":100,
+			"type":2,
+			"name":"dc_gamedb",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root",
+			"account_begin":"1",
+			"account_end":"9999999"
+		},
+		{
+			"id":0,
+			"type":3,
+			"name":"dc_center",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root",
+			"account_begin":"0",
+			"account_end":"0"
+		},
+		{
+			"id":0,
+			"type":4,
+			"name":"dc_logdb",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root",
+			"account_begin":"0",
+			"account_end":"0"
+		}
+	]
+}

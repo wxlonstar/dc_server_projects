@@ -1,0 +1,42 @@
+{
+	"db_list":
+	[
+		{
+			"id":1,
+			"name":"dc_memberdb",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root"
+		},
+		{
+			"id":2,
+			"name":"dc_gamedb",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root"
+		},
+		{
+			"id":3,
+			"name":"dc_center",
+			"address": "127.0.0.1",
+			"port":3306,
+			"username":"root",
+			"password":"root"
+		}
+	],
+	"field_list":
+	[
+		{
+			"name":"center_relation",
+			"fields":"int|8,uint|2,string,int|1,uint|2,int|1,uint|4,int|1,uint|2,uint|4,uint|4,uint|4,uint|4",
+			"fixed_length": 200
+		},
+		{
+			"name":"center_relation_event",
+			"fields":"string,string",
+			"fixed_length": 0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"log_level": 0,
+	"server_uid":4000,
+    "ws_ip":"127.0.0.1",
+	"ws_port":18000,
+	"ip_for_client":"127.0.0.1",
+	"port_for_client":7000,
+	"ip_for_server":"127.0.0.1",
+	"port_for_server":8000,
+	"speed_hack_check":1,
+	"max_connected":5000
+}

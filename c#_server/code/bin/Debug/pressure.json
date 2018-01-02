@@ -1,0 +1,22 @@
+{
+	"console":1,
+    "net_server_ip":"127.0.0.1",
+	"net_server_port":7000,
+	"net_client_count":1000,
+	"net_send_count":1,
+	"net_send_size":50,
+    "login_server_ip":"127.0.0.1",
+	"login_server_port":7000,
+	"login_client_count":1000,
+	"login_dis_time":1,
+    "move_server_ip":"127.0.0.1",
+	"move_server_port":7000,
+	"move_client_count":1000,
+	"move_start_account":1,
+	"move_time":10,
+    "db_server_ip":"127.0.0.1",
+	"db_server_port":7000,
+	"db_client_count":1000,
+	"db_start_account":1,
+	"db_dis_time":1
+}
