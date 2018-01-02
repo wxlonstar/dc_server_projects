@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F01B6EC3-D0D3-4753-A3CC-D8AA7F35D72D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Simulation</RootNamespace>
+    <AssemblyName>Simulation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\client\mgr\SpeedCheckManager.cs" />
+    <Compile Include="src\client\utils\ClientUtils.cs" />
+    <Compile Include="src\data\idmap\GlobalID.cs" />
+    <Compile Include="src\data\manager\ChatDataManager.cs" />
+    <Compile Include="src\data\manager\PingDataManager.cs" />
+    <Compile Include="src\data\manager\RelationDataManager.cs" />
+    <Compile Include="src\form\system\chat\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\chat\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\system\ping\PingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\ping\PingForm.Designer.cs">
+      <DependentUpon>PingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\system\relation\RelationAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\relation\RelationAddForm.Designer.cs">
+      <DependentUpon>RelationAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\system\relation\RelationListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\relation\RelationListForm.Designer.cs">
+      <DependentUpon>RelationListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\client\Master.cs" />
+    <Compile Include="src\client\net\ClientNetManager.cs" />
+    <Compile Include="src\client\net\ServerMsgProc.cs" />
+    <Compile Include="src\client\net\ServerMsgSend.cs" />
+    <Compile Include="src\client\unit\Player.cs" />
+    <Compile Include="src\client\unit\Unit.cs" />
+    <Compile Include="src\client\unit\UnitManager.cs" />
+    <Compile Include="src\data\idmap\common_id.cs" />
+    <Compile Include="src\data\idmap\event_id.cs" />
+    <Compile Include="src\data\idmap\form_id.cs" />
+    <Compile Include="src\data\idmap\system_id.cs" />
+    <Compile Include="src\data\info\ServerConfig.cs" />
+    <Compile Include="src\data\manager\DataManager.cs" />
+    <Compile Include="src\data\manager\LoginDataMgr.cs" />
+    <Compile Include="src\data\manager\MailDataManager.cs" />
+    <Compile Include="src\data\manager\PlayerDataMgr.cs" />
+    <Compile Include="src\form\main\DrawUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\main\DrawUserForm.Designer.cs">
+      <DependentUpon>DrawUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\system\mail\MailContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\mail\MailContentForm.Designer.cs">
+      <DependentUpon>MailContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\tools\LoggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\tools\LoggerForm.Designer.cs">
+      <DependentUpon>LoggerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\scene\ChangeSceneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\scene\ChangeSceneForm.Designer.cs">
+      <DependentUpon>ChangeSceneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\user\ModifyUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\user\ModifyUserInfoForm.Designer.cs">
+      <DependentUpon>ModifyUserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\system\mail\MailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\system\mail\MailForm.Designer.cs">
+      <DependentUpon>MailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\user\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\user\UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\user\CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\user\CreateUserForm.Designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\user\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\user\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\form\utils\MagneticForm.cs" />
+    <Compile Include="src\component\RegexTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\form\main\DrawUserForm.resx">
+      <DependentUpon>DrawUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\mail\MailContentForm.resx">
+      <DependentUpon>MailContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\chat\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\ping\PingForm.resx">
+      <DependentUpon>PingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\relation\RelationAddForm.resx">
+      <DependentUpon>RelationAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\relation\RelationListForm.resx">
+      <DependentUpon>RelationListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\tools\LoggerForm.resx">
+      <DependentUpon>LoggerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\scene\ChangeSceneForm.resx">
+      <DependentUpon>ChangeSceneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\user\ModifyUserInfoForm.resx">
+      <DependentUpon>ModifyUserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\system\mail\MailForm.resx">
+      <DependentUpon>MailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\user\UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\user\CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\user\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\component\RegexTextbox.resx">
+      <DependentUpon>RegexTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\Define\Define.csproj">
+      <Project>{326bc223-f9d1-4cc2-811d-e56201cdfc14}</Project>
+      <Name>Define</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\common\Framework\Framework.csproj">
+      <Project>{61efaf41-2507-4653-8532-3003410414c7}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\Core\Core.csproj">
+      <Project>{6cc827c1-119d-4700-a410-327d59a6e139}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\websocket-sharp\websocket-sharp.csproj">
+      <Project>{b357bac7-529e-4d81-a0d2-71041b19c8de}</Project>
+      <Name>websocket-sharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

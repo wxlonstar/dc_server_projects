@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61EFAF41-2507-4653-8532-3003410414C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\libs\mysql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\common\ThreadScheduler.cs" />
+    <Compile Include="src\data\config\ConfigBase.cs" />
+    <Compile Include="src\db\Database.cs" />
+    <Compile Include="src\db\DBManager.cs" />
+    <Compile Include="src\db\DBUtils.cs" />
+    <Compile Include="src\event\EventController.cs" />
+    <Compile Include="src\event\EventDispatcher.cs" />
+    <Compile Include="src\event\GameEvent.cs" />
+    <Compile Include="src\Framework.cs" />
+    <Compile Include="src\data\json\JsonFile.cs" />
+    <Compile Include="src\net\channel\NetChannelPools.cs" />
+    <Compile Include="src\net\encrypt\PacketEncrypt.cs" />
+    <Compile Include="src\net\NetUtils.cs" />
+    <Compile Include="src\net\socket\base\BaseNet.cs" />
+    <Compile Include="src\net\socket\base\NetConnecter.cs" />
+    <Compile Include="src\net\socket\base\NetAccepter.cs" />
+    <Compile Include="src\net\socket\iocp\IOCPNetConnecter.cs" />
+    <Compile Include="src\net\socket\web\WebNetConnecter.cs" />
+    <Compile Include="src\net\NetConnectManager.cs" />
+    <Compile Include="src\net\socket\iocp\IOCPNetAccepter.cs" />
+    <Compile Include="src\net\socket\tcp\TCPNetConnecter.cs" />
+    <Compile Include="src\net\channel\NetChannel.cs" />
+    <Compile Include="src\net\socket\tcp\TCPNetAccepter.cs" />
+    <Compile Include="src\net\socket\web\WebNetAccepter.cs" />
+    <Compile Include="src\tools\FileDirWatcher.cs" />
+    <Compile Include="src\tools\GameTimeManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\Core\Core.csproj">
+      <Project>{6cc827c1-119d-4700-a410-327d59a6e139}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\Fleck\Fleck.csproj">
+      <Project>{8b12d929-afa9-4307-beff-2ed0f1070fee}</Project>
+      <Name>Fleck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\websocket-sharp\websocket-sharp.csproj">
+      <Project>{b357bac7-529e-4d81-a0d2-71041b19c8de}</Project>
+      <Name>websocket-sharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Define\Define.csproj">
+      <Project>{326bc223-f9d1-4cc2-811d-e56201cdfc14}</Project>
+      <Name>Define</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
