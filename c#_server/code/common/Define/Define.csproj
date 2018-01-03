@@ -81,6 +81,7 @@
     <Compile Include="src\protocol\gs2ws.cs" />
     <Compile Include="src\protocol\internal.cs" />
     <Compile Include="src\protocol\ws2fs.cs" />
+    <Compile Include="src\utils\ObjectPools.cs" />
     <Compile Include="src\utils\PacketPools.cs" />
     <Compile Include="src\protocol\ProtocolID.cs" />
     <Compile Include="src\protocol\gs2c.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="src\protocol\gl2ss.cs" />
     <Compile Include="src\protocol\ws2ss.cs" />
     <Compile Include="src\utils\ByteArray.cs" />
-    <Compile Include="src\utils\ObjectPools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
